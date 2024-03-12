@@ -1,0 +1,32 @@
+<div class="container">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Status</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+      <th scope="col">Details</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let task of tasks">
+      <td>{{ task.title }}</td>
+      <td>{{ task.description}}</td>
+      <td>{{ task.status}}</td>
+      <td>
+        <a [routerLink]="['/task-edit', task._id]">Изменить</a>
+      </td>
+      <td>
+        <a (click)="confirmDelete(task._id)">Удалить</a>
+      </td>
+      <td>
+        <a [routerLink]="['/task', task._id]">Детально</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+

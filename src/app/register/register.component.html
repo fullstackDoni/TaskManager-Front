@@ -1,0 +1,13 @@
+<form>
+  <mat-form-field>
+    <input matInput placeholder="Username" name="username" [(ngModel)]="newUser.name">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="email" placeholder="Email" name="email" [(ngModel)]="newUser.email">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="password" placeholder="Password" name="password" [(ngModel)]="newUser.password">
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="register()">Register</button>
+</form>
+
